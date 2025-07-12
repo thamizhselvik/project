@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Questhive</title>
+    <!--Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <!--BootStrap-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <!--CSS-styles-->
+    <link rel="stylesheet" href="static/styles.css" />
+    <!--Font-Awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <!--BootStrap-Scripts-->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <style>
+        #first{
+          margin: 0;
+          background-color: #F53D68;
+          background-image: url("images/front3.jpg");
+          background-size: 100%;
+        }
+        
+       .logo{
+          display: flex;
+          justify-content: space-between;
+          color: #F53D68;
+          margin-left: -10px;
+          width: 100%;
+          margin-bottom: 20px;
+          position: absolute;
+      }
+      .img1{
+          width: 48px;
+          height: 55px;
+          margin-top: 0px;
+          margin-left: 15px;
+          display: inline-block;
+          position: absolute;
+          padding:0px;
+      }
+      span{
+          font-size: 44px;
+      }
+          
+      #questhive{
+          position: absolute;
+          left: 10px;
+          top: 3px;
+          margin-top: 0px;
+          font-size: 28px;
+          font-weight: bold;
+          margin-left: 53px;
+          color: #7b073f;
+      }
+      .head{
+          position: absolute;
+          top: 47px;
+          left: 100px;
+          font-size: 16px;
+          font-weight: bolder;
+          display: inline-block;
+          color: #7b073f;
+      }
+      .f0{
+          display: inline-block;
+          height: 35px;
+          width: 100px;
+          color:#7b073f;
+          padding-left: 20px;
+          float: right;
+          padding-top: 4px;
+          position: absolute;
+          left: 1429px;
+          top: 16px;
+          background-color: #ffffff;
+          text-decoration:none;
+          font-size: 18px;
+          border-top-left-radius: 10px;
+          border-bottom-left-radius: 10px;
+          box-shadow: 2px 2px 5px gray;
+      }
+      .fa-right-to-bracket{
+        color: #7b073f;
+        padding-right: 5px;
+        padding-left: 10px;
+      }
+      .f0:hover{
+          
+          color: #FFF8EE;
+          text-decoration: none;
+          background-color: #f5a3b9;
+      }
+      
+      .fa-circle-exclamation{
+        color: #291709;
+        padding-right: 10px;
+        padding-left: 5px;
+      }
+      .about1{
+        display: inline-block;
+        position: absolute;
+        right: 370px;
+        top: 20px;
+        color:#7b073f;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .about1:hover{
+        text-decoration: none;
+        color:#291709;
+      }
+      .about1::after{
+        content: '';
+        position: absolute;
+        height: 2px;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        background-color: #291709;
+        border-radius: 50px;
+        transition: .3s;
+      }
+      .about1:hover::after{
+        width: 90%;
+      }
+      .contact1{
+        display: inline-block;
+        position: absolute;
+        top: 20px;
+        right: 170px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        color:#7b073f
+      }
+      .contact1:hover{
+        text-decoration: none;
+        color: #291709;
+      }
+      .contact1::after{
+        content: '';
+        position: absolute;
+        height: 2px;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        background-color: #291709;
+        border-radius: 50px;
+        transition: .3s;
+      }
+      .contact1:hover::after{
+        width: 90%;
+      }
+      .fa-phone{
+        color: #291709;
+        padding-right: 10px;
+        padding-left: 5px;
+      }
+      .qs{
+        font-size: 32px;
+        display: inline-block;
+        position: absolute;
+        top: 165px;
+        left: 473px;
+        color:#7b073f;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        opacity: 70%;
+        font-weight: bold;
+      } 
+      .qs:first-letter{
+        font-size: 50px;
+      }
+      .h3{
+        position: relative;
+        font-size: 4rem;
+        color: #6c5c3b;
+      }
+      .hr1{
+        border-style: none;
+        background-color: #291709;
+        width: 53.7%;
+        height: 2px;
+        position: absolute;
+        top: 52px;
+        left: 715px;
+      }
+      .mid_1{
+        display:inline-block ;
+        position: absolute;
+        top: 240px;
+        left: 400px;
+        background-color: #ffffff;
+        height: 250px;
+        width: 500px;
+        border-radius: 20px;
+        opacity: 80%;
+      }
+      .p_tag{
+        display:inline-block ;
+        position: absolute;
+        top: 267px;
+        left: 430px;
+        font-size: 16px;
+        text-indent: 35px;
+        font-weight: bold;
+        word-spacing: 10px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: #F53D68;
+        width: 440px;
+        border-radius: 20px;
+        opacity: 90%;
+      }
+      .pie1{
+        position: absolute;
+        bottom: 40px;
+        left: 8px;
+        height: 200px;
+        width: 270px;
+        opacity: 80%;
+      }
+      .h2{
+        display: inline-block;
+        position: absolute;
+        bottom: 295px;
+        left: 60px;
+        font-size: 18px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: #7b073f;
+        font-weight: bold;
+      }
+      .h2_1{
+        display: inline-block;
+        position: absolute;
+        bottom: 273px;
+        left: 60px;
+        font-size: 14px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: #7b073f;
+        font-weight: bold;
+      }
+      .h2_2{
+        display: inline-block;
+        position: absolute;
+        bottom: 245px;
+        left: 60px;
+        font-size: 17px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color:#7b073f;
+        font-weight: bold;
+      }
+      .L2{
+        display: inline-block;
+        position: absolute;
+        bottom: 120px;
+        left: 118px;
+        font-size: 18px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: #7b073f;
+        font-weight: bold;
+      }
+      .side1{
+        height: 170px;
+        width: 170px;
+        display: inline-block;
+        position: absolute;
+        right: 70px;
+        top: 200px;
+        border-radius: 20px;
+      }
+      .side{
+        height: 180px;
+        width: 180px;
+        display: inline-block;
+        position: absolute;
+        right: 210px;
+        top: 350px;
+        border-radius: 20px;
+      }
+      .side2{
+        height: 120px;
+        width: 120px;
+        display: inline-block;
+        position: absolute;
+        right: 65px;
+        bottom: 200px;
+        border-radius: 20px;
+      }
+      #third{
+        background-color: #f84c74;
+      }
+      .quote{
+        position: absolute;
+        bottom: 50px;
+        left: 440px;
+        width: 500px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+        color:#7b073f;
+      }
+      .quote1{
+        position: absolute;
+        display: inline-block;
+        bottom: 380px;
+        right: 210px;
+        width: 180px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        color:#7b073f;
+      }
+      .img{
+        display: inline-block;
+        position: absolute;
+        top: 670px;
+      }
+      .writes{
+        margin-left: 800px;
+        margin-top: 20px;
+      }
+      .h3{
+        color:white;
+      }
+      .h4 h3{
+        color:#fff;
+      }
+      #fourth p{
+        color:#000;
+      }
+
+      #fifth{
+        background-color: #f84c74;
+      }
+
+      #fourth{
+        color:#7b073f;
+      }
+
+      .bbt{
+        background-color:#7b073f;
+      }
+      .qw{
+        color:#fff;
+      }
+      .about1, .contact1, .f0 {
+        transition: color 0.3s ease, background-color 0.3s ease;
+      }
+
+      .logo:hover img.img1 {
+        transform: scale(1.1);
+        transition: transform 0.4s ease;
+      }
+
+      #first {
+        opacity: 0;
+        animation: fadeIn 1.5s forwards;
+      }
+
+      #questhive, .head {
+        opacity: 0;
+        transform: translateY(-10px);
+        animation: slideDownFadeIn 1s forwards 0.5s;
+      }
+
+      .qs {
+        opacity: 0;
+        transform: translateY(-10px);
+        animation: slideUpFadeIn 1s forwards 0.7s;
+      }
+
+      .mid_1 {
+        opacity: 0;
+        transform: scale(0.95);
+        animation: zoomInFade 0.8s forwards 1s;
+      }
+
+      .quote, .quote1 {
+        opacity: 0;
+        animation: fadeIn 1.5s forwards 1.2s;
+      }
+      .pie1 {
+        animation: rotateImage 10s linear infinite;
+      }
+
+      @keyframes rotateImage {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+
+      @keyframes slideDownFadeIn {
+        0% { opacity: 0; transform: translateY(-20px); }
+        100% { opacity: 1; transform: translateY(0); }
+      }
+
+      @keyframes slideUpFadeIn {
+        0% { opacity: 0; transform: translateY(20px); }
+        100% { opacity: 1; transform: translateY(0); }
+      }
+
+      @keyframes zoomInFade {
+        0% { opacity: 0; transform: scale(0.95); }
+        100% { opacity: 1; transform: scale(1); }
+      }
+
+      .side1, .side, .side2 {
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+      }
+      .side1:hover, .side:hover, .side2:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .f0:hover .fa-right-to-bracket, .about1:hover .fa-circle-exclamation, .contact1:hover .fa-phone {
+        animation: iconBounce 0.5s ease;
+      }
+
+      @keyframes iconBounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-5px); }
+      }
+
+      .side1 {
+        animation: slowScaleRotate 8s ease-in-out infinite;
+      }
+
+      @keyframes slowScaleRotate {
+        0% {
+          transform: scale(1) rotate(0deg);
+        }
+        50% {
+          transform: scale(1.05) rotate(5deg);
+        }
+        100% {
+          transform: scale(1) rotate(0deg);
+        }
+      }
+
+      .side {
+        animation: pulseEffect 4s ease-in-out infinite;
+      }
+
+      @keyframes pulseEffect {
+        0%, 100% {
+          transform: scale(1);
+          box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+        }
+        50% {
+          transform: scale(1.1);
+          box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+        }
+      }
+
+      .side2 {
+        animation: bounceGlow 3s ease-in-out infinite;
+      }
+
+      @keyframes bounceGlow {
+        0%, 100% {
+          transform: translateY(0);
+          box-shadow: 0 0 0px rgba(255, 215, 0, 0);
+        }
+        50% {
+          transform: translateY(-10px);
+          box-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+        }
+      }
+
+      .writes {
+        opacity: 0;  /* Hidden by default */
+        transform: translateY(20px); /* Slight downward offset */
+        transition: opacity 2s ease-out, transform 2s ease-out; /* Slower animation transition */
+    }
+    
+    /* Fade-in class to make elements visible */
+    .fade-in {
+        opacity: 1;  /* Fully visible */
+        transform: translateY(0); /* Move to original position */
+    }
+    
+
+    </style>
+
+
+
+
+
+
+  </head>
+
+<body>
+    <section id="first">
+
+      <div class="logo">
+        <img class="img1" src="images/image2.png" alt="text">
+        <h3 id="questhive"><span>Q</span>uesthive</h3>
+        <h4 class="head">Learn to lead</h4>
+        <a href="#second" class="about1">About<i class="fa-solid fa-circle-exclamation"></i></a>
+        <a href="#fifth" class="contact1">Contact us<i class="fa-solid fa-phone"></i></a>
+        <a class="f0" href="login.php">Login<i class="fa-solid fa-right-to-bracket"></i></a>
+        <hr class="hr1">
+      </div>
+      <h1 class="qs">Questions Generator !</h1> 
+      <div class="mid_1">
+
+      </div>
+      <p class="p_tag">A Questions Generator is a tool or platform that automatically creates questions based on user input. You simply enter a topic or set some parameters, and the platform generates a variety of questions related to that input. It's useful for educators, content creators, and anyone needing questions for quizzes, discussions, or interviews, saving time and enhancing creativity.</p>
+      <img src="images/pie2.png" alt="" class="pie1">
+      <h2 class="h2">Progress</h2>
+      <h2 class="h2_1">through</h2>
+      <h2 class="h2_2">KNOWLEDGE !</h2>
+      <h2 class="L2">#QH</h2>
+      <img src="images/side_img.jpg" alt="" class="side1">
+      <img src="images/img_a1 (1).jpg" alt="" class="side">
+      <img src="images/side2.jpg" alt="" class="side2">
+
+      <p class="quote">"Boost your brainstorming sessions with diverse and tailored questions in seconds."</p>
+      <p class="quote1"><q>Unlock endless possibilities with our question generator platform.</q></p>
+    </section>
+    <section id="second">
+      <img class="img" src="images/image2.png" alt="" width="650px" height="705">
+      <div class="writes">
+        <h3>About</h3>
+        <br>
+        <h5>Welcome to Questhive - Where<br>You can generate different<br>different types of questions<br>in a same platform</h5>
+        <br>
+        <p>Using Questhive, you can easily generate a variety of questions<br>on a single platform. Whether you need quiz questions, discussion<br>prompts, or trivia, Questhive simplifies the process <br>with diverse options to suit all your needs. Explore and create<br>questions effortlessly with us!</p>
+      </div>
+    </section>
+
+    <section id="third">
+      <div class="align">
+        <h3 class="h3">Why use our Services ?</h3>
+      </div>
+      <div class="row">
+        <div class="feature-box col-lg-4">
+            <img src="images/ai.png" alt="" width="300px" height="300px">
+            <h4><strong>Automation</strong></h4>
+            <p class="h4">Streamline your workflow<br>with our automated question<br>generator. Quickly produce a<br>wide range of questions<br>without manual input, saving<br>time.</p>
+        </div>
+        <div class="feature-box col-lg-4">
+          <img src="images/way.png" alt="" width="300px" height="300px">
+          <h4><strong>Easy to Use</strong></h4>
+          <p class="h4">Our interface is user-friendly,<br>allowing you to effortlessly<br>create and customize questions<br>with just a few clicks.<br>No technical skills required!<br></p>
+        </div>
+        <div class="feature-box col-lg-4">
+          <img src="images/chess.png" alt="" width="300px" height="300px">
+          <h4><strong>See the Difference</strong></h4>
+          <p class="h4">Experience the efficiency and<br>precision of automated question<br>generation. Notice improved<br>accuracy and variety in<br>questions compared to manual<br>methods.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="fourth">
+      <h3 class="d1">Types of Questions</h3>
+      <div class="row">
+        <div class="pricing col-lg-4 col-md-6">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="d1">Essay-Paragraph</h3>
+            </div>
+            <div class="card-body">
+              <p class="d1">Generate Question/Answer</p>
+              <p class="d1">From Paragraph/Essay</p>
+              <p class="d1">Uses GEN AI (lemma)</p>
+              <p class="d1">Also provide Answer</p>
+              <button
+                type="button"
+                class="w-100 btn btn-lg btn-block btn-dark bbt"
+              >
+                Got it
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pricing col-lg-4 col-md-6">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="d1">Coding</h3>
+            </div>
+            <div class="card-body">            
+              <p class="d1">Generate Coding Questions</p>
+              <p class="d1">Can Select Difficulty</p>
+              <p class="d1">Uses GEN AI (lemma)</p>
+              <p class="d1">Generate `n` Number of Questions</p>
+              <button type="button" class="w-100 btn btn-lg btn-block btn-dark bbt">
+                Got it
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pricing col-lg-4 col-md-12">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="d1">MCQs</h3>
+            </div>
+            <div class="card-body">       
+              <p class="d1">Generate MCQ Questions</p>
+              <p class="d1">Can Select Difficulty</p>
+              <p class="d1">Uses Generative AI (lemma)</p>
+              <p class="d1">Generate Questions topicwise</p>
+              <button type="button" class="w-100 btn btn-lg btn-block btn-dark bbt">
+                Got it
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="fifth">
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.792044920742!2d80.0754642!3d13.0489049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5261c68a9f3031%3A0xab41c8bdcf32ad47!2sPanimalar%20Engineering%20College!5e0!3m2!1sen!2sin!4v1743691844174!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="content">
+        <h3 style="color:#fff; font-size:3.5rem;">At Questhive, we invite you to<br>create an AI world<br>of technology to the future...</h3>
+        <h5 class="qw">E-mail:</h5>
+        <p class="qw">clumsycoders2@gmail.com</p>
+        <h5 class="qw">Phone:</h5>
+        <p class="qw">9384157873</p>
+        <h5 class="qw">Address:</h5>
+        <p class="qw">panimalar engineering college <br>poonamalle ,chennai.</p>
+      </div>
+    </section>
+      <footer id="footer">
+        <i class="social-icon fa-brands fa-facebook"></i>
+        <i class="social-icon fa-brands fa-twitter"></i>
+        <i class="social-icon fa-brands fa-instagram"></i>
+        <i class="social-icon fa-solid fa-envelope"></i>
+        <p>© Copyright Questhive</p>
+      </footer>
+      <script>
+        function isInViewport(element) {
+          const rect = element.getBoundingClientRect();
+          return (
+              rect.top <= (window.innerHeight || document.documentElement.clientHeight)
+          );
+      }
+  
+      // Function to add fade-in effect on scroll
+      function handleScroll() {
+          const writesSection = document.querySelector('.writes');
+          
+          if (isInViewport(writesSection)) {
+              writesSection.classList.add('fade-in'); // Add fade-in class
+              window.removeEventListener('scroll', handleScroll); // Remove listener after animation
+          }
+      }
+  
+      // Add scroll event listener
+      window.addEventListener('scroll', handleScroll);
+      </script>
+</body>
+</html>
